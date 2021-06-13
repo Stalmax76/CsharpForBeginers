@@ -92,20 +92,6 @@ namespace ConsoleApp1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             #endregion
 
             Console.ReadKey();
