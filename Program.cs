@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace ConsoleApp1
 {
@@ -29,6 +30,12 @@ namespace ConsoleApp1
             #endregion
 
             #region calculator
+
+            NumberFormatInfo numberFormatInfo = new NumberFormatInfo
+            {
+                NumberDecimalSeparator = ".",
+            };
+
             double firstNumber;
             double secondNumber;
             double result;
