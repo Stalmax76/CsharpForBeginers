@@ -47,30 +47,20 @@ namespace ConsoleApp1
 
 
             EnterDate();
-
-            Console.WriteLine("select the action to be performed: '+', '-', '/', '*', '%'");   // '+', '-', '/', '*', '%'
-            char.TryParse(Console.ReadLine(), out action);
+            ActionSelection();
 
             if (action != '+' || action != '-' || action != '+' || action != '+' || action != '+')
-            { 
+            {
                 switch (action)
                 {
                     case '+':
-                        result = firstNumber + secondNumber;
-                        Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
-                        dates = num2 = num1 = true;
+                        Sum();
                         break;
                     case '-':
-                        result = firstNumber - secondNumber;
-                        Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
-                        result = firstNumber - secondNumber;
-                        dates = num2 = num1 = true;
+                        Subtraction();
                         break;
                     case '*':
-                        result = firstNumber * secondNumber;
-                        Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
-                        result = firstNumber * secondNumber;
-                        dates = num2 = num1 = true;
+                        Multiplication();
                         break;
                     case '/':
 
@@ -110,11 +100,42 @@ namespace ConsoleApp1
             {
                 return;
             }
-        Console.ReadKey();
+            Console.ReadKey();
 
-            
+
         }
-       
+
+        private static double Multiplication()
+        {
+            result = firstNumber * secondNumber;
+            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            dates = num2 = num1 = true;
+            return result;
+           
+        }
+
+        private static double Subtraction()
+        {
+            result = firstNumber - secondNumber;
+            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            dates = num2 = num1 = true;
+            return result;
+        }
+
+        private static double Sum()
+        {
+            result = firstNumber + secondNumber;
+            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            dates = num2 = num1 = true;
+            return result;
+        }
+
+        private static char ActionSelection()
+        {
+            Console.WriteLine("select the action to be performed: '+', '-', '/', '*', '%'");   // '+', '-', '/', '*', '%'
+            char.TryParse(Console.ReadLine(), out action);
+            return action;
+        }
 
         private static bool EnterDate()
         {
