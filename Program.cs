@@ -66,9 +66,7 @@ namespace ConsoleApp1
 
                         if (secondNumber != 0)
                         {
-                            result = firstNumber / secondNumber;
-                            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
-                            dates = num2 = num1 = true;
+                            Devide();
                             break;
                         }
                         else
@@ -79,9 +77,7 @@ namespace ConsoleApp1
                     case '%':
                         if (secondNumber != 0)
                         {
-                            result = firstNumber % secondNumber;
-                            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
-                            dates = num2 = num1 = true;
+                            DevideModule();
                             break;
                         }
                         else
@@ -103,6 +99,21 @@ namespace ConsoleApp1
             Console.ReadKey();
 
 
+        }
+
+        private static void DevideModule()
+        {
+            result = firstNumber % secondNumber;
+            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            dates = num2 = num1 = true;
+        }
+
+        private static double Devide()
+        {
+            result = firstNumber / secondNumber;
+            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            dates = num2 = num1 = true;
+            return result;
         }
 
         private static double Multiplication()
