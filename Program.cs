@@ -20,6 +20,9 @@ namespace ConsoleApp1
         static bool num2 = true;
         static bool dates = true;
 
+
+        // Параметр in  объявляет переменную только для чтения, которую нельзя изменять в передаче переменной в функциях
+
           static void Main(string[] args)
         {
             #region array names
@@ -54,19 +57,19 @@ namespace ConsoleApp1
                 switch (action)
                 {
                     case '+':
-                        Sum();
+                        Sum(firstNumber, secondNumber, action);
                         break;
                     case '-':
-                        Subtraction();
+                        Subtraction(firstNumber, secondNumber, action);
                         break;
                     case '*':
-                        Multiplication();
+                        Multiplication(firstNumber, secondNumber, action);
                         break;
                     case '/':
 
                         if (secondNumber != 0)
                         {
-                            Devide();
+                            Devide(firstNumber, secondNumber, action);
                             break;
                         }
                         else
@@ -77,7 +80,7 @@ namespace ConsoleApp1
                     case '%':
                         if (secondNumber != 0)
                         {
-                            DevideModule();
+                            DevideModule(firstNumber, secondNumber, action);
                             break;
                         }
                         else
@@ -101,42 +104,43 @@ namespace ConsoleApp1
 
         }
 
-        private static void DevideModule()
+        private static double DevideModule(double d1, double d2, char a)
         {
-            result = firstNumber % secondNumber;
-            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
-            dates = num2 = num1 = true;
-        }
-
-        private static double Devide()
-        {
-            result = firstNumber / secondNumber;
-            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            result = d1 % d2;
+            Console.WriteLine("{0}  {1}  {2} = {3}", d1, a, d2, result);
             dates = num2 = num1 = true;
             return result;
         }
 
-        private static double Multiplication()
+        private static double Devide(double d1, double d2, char a)
         {
-            result = firstNumber * secondNumber;
-            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            result = d1 / d2;
+           Console.WriteLine("{0}  {1}  {2} = {3}", d1, a, d2, result);
+            dates = num2 = num1 = true;
+            return result;
+        }
+
+        private static double Multiplication(double d1, double d2, char a)
+        {
+            result = d1 * d2;
+            Console.WriteLine("{0}  {1}  {2} = {3}", d1, a, d2, result);
             dates = num2 = num1 = true;
             return result;
            
         }
 
-        private static double Subtraction()
+        private static double Subtraction(double d1, double d2, char a)
         {
-            result = firstNumber - secondNumber;
-            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            result = d1 - d2;
+            Console.WriteLine("{0}  {1}  {2} = {3}", d1, a, d2, result);
             dates = num2 = num1 = true;
             return result;
         }
 
-        private static double Sum()
+        private static double Sum(double d1, double d2, char a)
         {
-            result = firstNumber + secondNumber;
-            Console.WriteLine("{0}  {1}  {2} = {3}", firstNumber, action, secondNumber, result);
+            result = d1 + d2;
+            Console.WriteLine("{0}  {1}  {2} = {3}", d1, a, d2, result);
             dates = num2 = num1 = true;
             return result;
         }
