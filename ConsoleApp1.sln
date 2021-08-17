@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1.csproj", "{DDB629BC-52C5-4520-A17B-7A38BE783685}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack", "..\BlackJack\BlackJack.csproj", "{E4A2E4B0-199A-44DC-95C4-09F676D746C4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "..\Methods\Methods.csproj", "{C82C4295-FF4A-411C-90CF-027C94700186}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{DDB629BC-52C5-4520-A17B-7A38BE783685}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDB629BC-52C5-4520-A17B-7A38BE783685}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDB629BC-52C5-4520-A17B-7A38BE783685}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4A2E4B0-199A-44DC-95C4-09F676D746C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4A2E4B0-199A-44DC-95C4-09F676D746C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4A2E4B0-199A-44DC-95C4-09F676D746C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4A2E4B0-199A-44DC-95C4-09F676D746C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C82C4295-FF4A-411C-90CF-027C94700186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C82C4295-FF4A-411C-90CF-027C94700186}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C82C4295-FF4A-411C-90CF-027C94700186}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C82C4295-FF4A-411C-90CF-027C94700186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
